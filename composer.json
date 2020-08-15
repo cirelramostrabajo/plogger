@@ -1,0 +1,18 @@
+{
+  "name": "cirelramostrabajo/plogger",
+  "description": "A simple hello world composer package",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cirel Ramos",
+      "email": "Cirel Ramos"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {"Cirelramostrabajo\\Plogger\\": "src/"}
+  },
+  "require": {}
+}
+
