@@ -20,6 +20,12 @@ Install via [composer](https://getcomposer.org/doc/00-intro.md)
 composer require litermi/elasticlog
 ```
 
+add row in config/app.php
+
+```php
+ \Cirelramostrabajo\Plogger\ElasticServiceProvider::class
+```
+
 
 publish config
 
