@@ -20,8 +20,6 @@ class SendLogUdpJsonHandler extends AbstractSyslogHandler
      * @param string  $ident  Program name or tag for each log message.
      */
     public function __construct(
-        $host,
-        $port = 5000,
         $facility = LOG_USER,
         $level = Logger::DEBUG,
         $bubble = true,
@@ -31,6 +29,8 @@ class SendLogUdpJsonHandler extends AbstractSyslogHandler
 
         $this->ident = $ident;
 
+        $host = config('elastic.elastic_url');
+        $port = config('elastic.elastic_port');
         $this->socket = new UdpSocket($host, $port ? : 5000);
     }
 

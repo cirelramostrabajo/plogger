@@ -12,9 +12,7 @@ class ElasticServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/config/elastic.php' => config_path('elastic.php'),
-        ]);
+        $this->setUpConfig();
     }
 
     /**
@@ -25,5 +23,17 @@ class ElasticServiceProvider extends ServiceProvider
     public function register()
     {
         //
+    }
+    protected function setUpConfig()
+    {
+        if ($this->app instanceof LaravelApplication) {
+            $this->publishes([
+                __DIR__ . '/config/elastic.php' => config_path('elastic.php')
+            ], 'config');
+        } elseif ($this->app instanceof LumenApplication) {
+            $this->app->configure('elastic');
+        }
+
+        $this->mergeConfigFrom($source, 'elastic');
     }
 }
