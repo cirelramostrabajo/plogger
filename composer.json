@@ -9,6 +9,10 @@
       "email": "cirelramos@gmail.com"
     }
   ],
+  "support": {
+    "issues": "https://github.com/cirelramostrabajo/plogger/issues",
+    "source": "https://github.com/cirelramostrabajo/plogger"
+  },
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {"Cirelramostrabajo\\Plogger\\": "src/"}
