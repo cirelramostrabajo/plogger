@@ -34,7 +34,7 @@ php artisan vendor:publish --provider="Cirelramostrabajo\Plogger\Providers\Elast
 ```
 
 
-Edit `config/logging.php` to add the new `gelf` logs channel.
+Edit `config/logging.php` to add the new `logger` logs channel.
 
 ```php
 return [
