@@ -52,7 +52,7 @@ return [
 
 ## Usage
 
-Once you have modified the Laravel logging configuration, you can use the gelf log channel [as any Laravel log channel](https://laravel.com/docs/master/logging#writing-log-messages).
+Once you have modified the Laravel logging configuration, you can send log channel via tcp or udp [as any Laravel log channel](https://laravel.com/docs/master/logging#writing-log-messages).
 
 ### Example
 
